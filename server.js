@@ -6,6 +6,9 @@ const port = process.env.PORT || 4001;
 
 const db = require("./config/keys.js").mongoURI
 const users  = require('./routes/api/user.js')
+
+//Big file upload and Breakpoint continuation
+const upload = require("./routes/api/upload.js")
 mongoose.connect(db)
     .then(() => console.log("MongoDB connected!"))
     .catch((err) => {
@@ -20,6 +23,8 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json())
 //使用中间件 routes
 app.use("/api/users",users)
+app.use("/api/upload",upload)
+
 
 
 
