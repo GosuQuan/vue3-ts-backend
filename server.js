@@ -1,4 +1,7 @@
-const express = require("express")
+const express = require("express"),
+PORT = 4001,
+HOST = 'http://localhost';
+HOSTNAME = `${HOST}:${PORT}`;
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser")
 const app = express();
