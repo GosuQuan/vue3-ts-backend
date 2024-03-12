@@ -29,8 +29,6 @@ app.use("/api/users",users)
 app.use("/api/upload",upload)
 
 
-
-
 app.listen(port, () => {
     console.log(`server running on port ${port}`);
 
